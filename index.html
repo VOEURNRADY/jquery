@@ -1,18 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>VOEURN RADY</title>
-	<script scr="../JQUERY/jquery-3.2.1.js"></script>
-</head>
-<body>
-	<h1>Hello World</h1>
+<script src="js/jquery-3.2.1.min.js"></script>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			color: white;
+			background-color: blue;
+		}
+	</style>
 	<script>
-		$(document).ready(function() {
-			$("h1").click(function(){
-				alert("Hello World");
+		$(document).ready(function(){
+		    $("#btn1").click(function(){
+		        $("#box").animate({left: "300px"});
+		    });
+		    $("#btn2").click(function(){
+		        $("#box").animate({top: "100px"});
 			});
 		});
 	</script>
+</head>
+<body>
+
+<button id="btn1">Animate height</button>
+<button id="btn2">Reset height</button>
+
+<div id="box" style="background:#98bf21;height:100px;width:100px;margin:6px; position: relative;"></div>
+
+<p>If you click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+
 </body>
 </html>
